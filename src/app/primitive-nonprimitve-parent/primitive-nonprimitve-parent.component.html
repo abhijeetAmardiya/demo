@@ -1,0 +1,7 @@
+<h2>Parent Component</h2>
+<p>Primitive Data : {{ primitiveData }}</p>
+<p>Non-Primitive Data : {{ nonPrimitiveData |json }}</p>
+<button (click)="updatePrimitveData()">Update Primitive Data</button>
+<button (click)="updateNonPrimitveData()">Update Non-Primitive Data</button>
+
+<app-primitive-nonprimitve-child *ngIf="forChild" [primitiveData]="primitiveData" [nonPrimitiveData]="nonPrimitiveData"></app-primitive-nonprimitve-child>

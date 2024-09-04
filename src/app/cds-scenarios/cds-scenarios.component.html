@@ -1,0 +1,17 @@
+<div>
+    <div>
+        There are different ways to detectChanges using ChangeDetectionStrategy.OnPush
+    </div>
+    <div (click)="using('input')">1. Using @Input() method </div>
+    <div (click)="using('event')">2. Using events </div>
+    <div (click)="using('observable')">3. Using observables</div>
+    <div (click)="using('cdr')">4. Using ChangeDetectorRef.detectchanges() method </div>
+
+    <p>
+        Parent Component
+    </p>
+    <app-cds-using-input *ngIf="way=='input'" [count]="count"></app-cds-using-input>
+    <app-cds-using-event *ngIf="way=='event'"></app-cds-using-event>
+    <app-cds-using-observable *ngIf="way=='observable'"></app-cds-using-observable>
+    <app-cds-using-cdr *ngIf="way=='cdr'"></app-cds-using-cdr>
+</div>
