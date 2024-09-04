@@ -13,6 +13,8 @@ import { CdsScenariosComponent } from './cds-scenarios/cds-scenarios.component';
 import { CdsUsingInputComponent } from './cds-using-input/cds-using-input.component';
 import { CdsUsingEventComponent } from './cds-using-event/cds-using-event.component';
 import { CdsUsingObservableComponent } from './cds-using-observable/cds-using-observable.component';
+import { DiHierarchicalComponent } from './di-hierarchical/di-hierarchical.component';
+import { DiHierarchicalDemonstrateComponent } from './di-hierarchical-demonstrate/di-hierarchical-demonstrate.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CdsUsingObservableComponent } from './cds-using-observable/cds-using-ob
     CdsScenariosComponent,
     CdsUsingInputComponent,
     CdsUsingEventComponent,
-    CdsUsingObservableComponent
+    CdsUsingObservableComponent,
+    DiHierarchicalComponent,
+    DiHierarchicalDemonstrateComponent
   ],
   imports: [
     BrowserModule,

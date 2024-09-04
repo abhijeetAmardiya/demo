@@ -2,14 +2,33 @@
     <div>
         There are different ways to detectChanges using ChangeDetectionStrategy.OnPush
     </div>
-    <div (click)="using('input')">1. Using @Input() method </div>
-    <div (click)="using('event')">2. Using events </div>
-    <div (click)="using('observable')">3. Using observables</div>
-    <div (click)="using('cdr')">4. Using ChangeDetectorRef.detectchanges() method </div>
+    <button style="cursor: pointer; margin-right: 3px; margin-bottom: 3px" (click)="using('input')">Using @Input() </button>
+    <button style="cursor: pointer; margin-right: 3px; margin-bottom: 3px" (click)="using('event')">Using events </button>
+    <button style="cursor: pointer; margin-right: 3px; margin-bottom: 3px" (click)="using('observable')">Using observables</button>
+    <button style="cursor: pointer; margin-right: 3px; margin-bottom: 3px" (click)="using('cdr')">Using ChangeDetectorRef.detectchanges() </button>
 
-    <p>
-        Parent Component
-    </p>
+    <div [ngSwitch]="way">
+        <ng-container *ngSwitchCase="'input'">
+            <strong>
+                Using @Input()
+            </strong>
+            <p>
+                Parent Component
+            </p>
+            <p>
+                Count : {{count}}
+            </p>
+        </ng-container>
+        <strong *ngSwitchCase="'event'">
+            Using events
+        </strong>
+        <strong *ngSwitchCase="'observable'">
+            Using observables
+        </strong>
+        <strong *ngSwitchCase="'cdr'">
+            Using ChangeDetectorRef.detectchanges()
+        </strong>
+    </div>
     <app-cds-using-input *ngIf="way=='input'" [count]="count"></app-cds-using-input>
     <app-cds-using-event *ngIf="way=='event'"></app-cds-using-event>
     <app-cds-using-observable *ngIf="way=='observable'"></app-cds-using-observable>

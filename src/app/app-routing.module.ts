@@ -4,29 +4,39 @@ import { ParentComponent } from './parent/parent.component';
 import { PrimitiveNonprimitveParentComponent } from './primitive-nonprimitve-parent/primitive-nonprimitve-parent.component';
 import { CdsUsingCdrComponent } from './cds-using-cdr/cds-using-cdr.component';
 import { CdsScenariosComponent } from './cds-scenarios/cds-scenarios.component';
+import { DiHierarchicalComponent } from './di-hierarchical/di-hierarchical.component';
+import { DiHierarchicalDemonstrateComponent } from './di-hierarchical-demonstrate/di-hierarchical-demonstrate.component';
 
 const routes: Routes = [
   {
-    path: 'parent',
+    path: 'cds/parent',
     component: ParentComponent
   },
   {
-    path: 'primitive-nonprimitive-parent',
+    path: 'cds/primitive-nonprimitive-parent',
     component: PrimitiveNonprimitveParentComponent,
     data: {forChild:false}
   },
   {
-    path: 'primitive-nonprimitive-parent-child',
+    path: 'cds/primitive-nonprimitive-parent-child',
     component: PrimitiveNonprimitveParentComponent,
     data: {forChild:true}
   },
   {
-    path: 'cds-using-cdr',
+    path: 'cds/cds-using-cdr',
     component: CdsUsingCdrComponent
   },
   {
-    path: 'cds-scenarios',
+    path: 'cds/cds-scenarios',
     component: CdsScenariosComponent
+  },
+  {
+    path: 'di/hierarchical',
+    component: DiHierarchicalComponent
+  },
+  {
+    path: 'di/hierarchical-demonstrate',
+    component: DiHierarchicalDemonstrateComponent
   }
 ];
 
