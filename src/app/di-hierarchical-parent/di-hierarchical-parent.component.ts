@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Host, Self } from '@angular/core';
 import { DiHierarchicalService } from '../services/di-hierarchical.service';
 
 @Component({

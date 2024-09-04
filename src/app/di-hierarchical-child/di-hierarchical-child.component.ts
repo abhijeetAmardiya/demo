@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Host, Self, SkipSelf } from '@angular/core';
 import { DiHierarchicalService } from '../services/di-hierarchical.service';
 
 @Component({
@@ -8,7 +8,14 @@ import { DiHierarchicalService } from '../services/di-hierarchical.service';
   providers: [DiHierarchicalService]
 })
 export class DiHierarchicalChildComponent {
-  constructor(public diHierarchicalService: DiHierarchicalService) {
+  // constructor(public diHierarchicalService: DiHierarchicalService) {
+  //   this.diHierarchicalService.data = 'Data modified by ChildComponent';
+  // }
+  // constructor(@SkipSelf() public diHierarchicalService: DiHierarchicalService) {
+  //   // this.diHierarchicalService.data = 'Data modified by ChildComponent';
+  // }
+
+  constructor(@SkipSelf() public diHierarchicalService: DiHierarchicalService) {
     this.diHierarchicalService.data = 'Data modified by ChildComponent';
   }
 }
